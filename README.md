@@ -11,7 +11,7 @@ Accurate Quantity & Price Extraction: Pulls card stack quantities and market val
 
 Total Portfolio Valuation: Automatically aggregates and prints your total estimated portfolio value directly in the console.
 
-Outputs a structured CSV (tcgplayer_import_with_prices.csv),
+Outputs a structured CSV (tcgplayer_import_with_prices.csv)
 
 Prerequisites
 PyCharm (recommended)
