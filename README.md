@@ -1,46 +1,41 @@
-# RareCandyExport
-Rare Candy Portfolio Scraper and Exporter
-A robust Python automation tool built with Playwright that logs into Rare Candy, scrolls through your entire card portfolio, extracts card details (names, set names, quantities, and market values), and outputs clean files ready for seamless collection tracking and valuation.
+# Rare Candy Portfolio Scraper
 
-Features
-Persistent Browser Session: Uses a local user data directory so you only have to log in manually once—subsequent runs reuse your session cookies.
+A Python automation tool built with **Playwright** that logs into [Rare Candy](https://rarecandy.com/), scrolls through your entire card portfolio, extracts card details (names, set names, quantities, and market values), calculates your total portfolio valuation, and exports a clean CSV report.
 
-Full DOM Inspection: Prompts you to load your portfolio page fully before scraping, ensuring all lazy-loaded card elements and asset images are available.
+---
 
-Accurate Quantity & Price Extraction: Pulls card stack quantities and market valuations while safely ignoring collection set numbers and IDs.
+## Features
 
-Total Portfolio Valuation: Automatically aggregates and prints your total estimated portfolio value directly in the console.
+* **Persistent Browser Session:** Uses a local user data directory so you only have to log in manually once—subsequent runs reuse your session cookies.
+* **Full DOM Inspection:** Prompts you to load your portfolio page fully before scraping, ensuring all lazy-loaded card elements and asset images are available.
+* **Accurate Quantity & Price Extraction:** Pulls card stack quantities and market valuations while safely ignoring collection set numbers and IDs.
+* **Total Portfolio Valuation:** Automatically aggregates and prints your total estimated portfolio value directly in the console.
+* **Structured Export:** Generates a complete CSV file (`tcgplayer_import_with_prices.csv`) containing your quantities, product names, set names, conditions, and individual card market prices.
 
-Outputs a structured CSV (tcgplayer_import_with_prices.csv)
+---
 
-Prerequisites
-PyCharm (recommended)
-Python 3.8 or higher
+## Prerequisites
 
-Playwright for Python
+* Python 3.8 or higher
+* Playwright for Python
+* Pandas
 
-Installation & Setup
-Clone or download this repository into your local project directory.
+> **💡 Pro-Tip:** Using **PyCharm** makes managing this script, installing requirements, and running your virtual environment (`.venv`) seamless. You can open your project directory directly in PyCharm, use the built-in terminal to install dependencies, and run or debug your script with a single click.
 
-Install dependencies via your terminal:
+---
 
-Bash:
-pip install playwright pandas
-playwright install chromium
+## Installation & Setup
+
+1. **Clone or download** this repository into your PyCharm project directory.
+2. **Install dependencies** via the PyCharm terminal:
+   ```bash
+   pip install playwright pandas
+   playwright install chromium
+
+<img width="796" height="299" alt="Screenshot 2026-10-10 120703" src="https://github.com/user-attachments/assets/187a2768-0887-45f1-a377-57c56c7aeab1" />
 
 
-Run the Python script:
+<img width="1274" height="841" alt="Screenshot 2026-10-10 120650" src="https://github.com/user-attachments/assets/95a69662-8d23-4861-91c0-ab6dcf1fdc11" />
 
 
-python scrape_portfolio.py
-A browser window will launch and navigate to Rare Candy.
-
-Log in to your account and navigate to your portfolio page.
-
-Scroll down slowly in the browser window until your entire portfolio and all cards are fully loaded into view.
-
-Go back to your terminal, press Enter when prompted (Did you login and load full page?).
-
-The script will scrape the portfolio, calculate your total portfolio value, and generate:
-
-tcgplayer_import_with_prices.csv (Full CSV export with prices)
+<img width="762" height="461" alt="Screenshot 2026-10-10 121411" src="https://github.com/user-attachments/assets/a6152e86-3db2-4a81-a4f5-171d5d46d970" />
